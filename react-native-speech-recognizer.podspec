@@ -14,6 +14,9 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/fenglu09/react-native-speech-recognizer.git", :tag => "#{s.version}" }
   s.source_files  = "ios/**/*.{h,m}"
+  s.framework = 'AVFoundation','Foundation','SystemConfiguration','CoreTelephony','AudioToolbox','UIKit','CoreLocation','QuartzCore','CoreGraphics'
+  s.libraries = 'sqlite3','z'
+  s.vendored_frameworks = 'ios/lib/iflyMSC.framework'
 
   s.dependency 'React'
 end
